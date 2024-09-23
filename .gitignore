@@ -1,0 +1,15 @@
+# Angular
+/angular-frontend/node_modules
+/angular-frontend/dist
+/angular-frontend/.angular
+.DS_Store
+
+# Spring Boot
+/springboot-backend/target
+/springboot-backend/.idea
+/springboot-backend/.settings
+/springboot-backend/.classpath
+/springboot-backend/.project
+*.log
+*.jar
+*.war
