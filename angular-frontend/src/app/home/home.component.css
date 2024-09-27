@@ -1,4 +1,67 @@
-.home-container {
-    text-align: center;
+/* Basic styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #084298;
+    color: #fff;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    /* Change to flex to arrange cards in a row */
+    justify-content: center;
+    /* Center align cards */
     margin-top: 50px;
+    flex-wrap: wrap;
+    /* Allows cards to wrap in case of smaller screens */
+}
+
+.pond-card {
+    display: flex;
+    border: 1px solid #084298;
+    border-radius: 8px;
+    margin: 10px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.pond-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.pond-description {
+    padding: 1rem;
+    background-color: #fff;
+    color: #084298;
+}
+
+.view-button {
+    background-color: #084298;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background-color: #0b5ed7;
 }

@@ -1,20 +1,34 @@
-<div class="login-container">
-    <h2>Login</h2>
-    <form (ngSubmit)="loginUser()">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" [(ngModel)]="user.username" name="username" required />
+<div class="login-container" [@fadeInOut]>
+    <div class="login-card">
+        <div class="login-header">
+            <h2>Welcome Back</h2>
+            <p>Please sign in to continue</p>
         </div>
-
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" [(ngModel)]="user.password" name="password" required />
+        <form (ngSubmit)="loginUser()" #loginForm="ngForm" class="login-form">
+            <div class="form-group">
+                <label for="username">
+                    <i class="fas fa-user"></i>
+                </label>
+                <input type="text" id="username" [(ngModel)]="user.username" name="username" required
+                    placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-lock"></i>
+                </label>
+                <input type="password" id="password" [(ngModel)]="user.password" name="password" required
+                    placeholder="Password">
+            </div>
+            <button type="submit" [disabled]="!loginForm.form.valid || isLoading" class="login-button">
+                <span *ngIf="!isLoading">Login</span>
+                <span *ngIf="isLoading" class="loader"></span>
+            </button>
+        </form>
+        <div class="login-footer">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <p class="register-link">
+                Don't have an account? <a routerLink="/register">Register</a>
+            </p>
         </div>
-
-        <button type="submit">Login</button>
-    </form>
-
-    <p class="register-link">
-        Don't have an account? <a routerLink="/register">Register</a>
-    </p>
+    </div>
 </div>
